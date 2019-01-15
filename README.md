@@ -5,6 +5,10 @@ DPDK Fast Install
 ```
 sudo apt install python-minimal build-essential vim libnuma-dev
 sudo apt install linux-headers-$(uname -r) libpcap-dev
+
+
+sed -ri s/"1/"0/ /etc/apt/apt.conf.d/20auto-upgrades
+
 ```
 
 # Centos
