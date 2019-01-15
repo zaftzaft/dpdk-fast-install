@@ -37,6 +37,10 @@ sed -ri 's,(PMD_SZEDATA2=).*,\1y,' build/.config
 sed -ri 's,(MLX5_PMD=).*,\1y,' build/.config
 
 make
+# all core
+make -j `grep -c ^processor /proc/cpuinfo 2>/dev/null`
+
+
 sudo make install
 ```
 
@@ -67,3 +71,24 @@ hugetlbfs           /dev/hugepages  hugetlbfs      defaults        0 0
 ```
 
 # dpdk-devbind....
+```dpdk-init.sh
+modprobe uio
+insmod /opt/dpdk-18.11/build/kmod/igb_uio.ko
+insmod /opt/dpdk-18.11/build/kmod/rte_kni.ko
+
+dpdk-devbind -b igb_uio 0000:18:00.0
+dpdk-devbind -b igb_uio 0000:18:00.1
+```
+
+
+
+
+
+
+# appendix
+## ubuntu useradd
+```
+sudo useradd -m -s /bin/bash USER
+sudo gpasswd -a USER sudo
+sudo passwd USER
+```
