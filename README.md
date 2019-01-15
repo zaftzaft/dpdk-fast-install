@@ -50,10 +50,16 @@ GRUB_CMDLINE_LINUX="default_hugepagesz=1G hugepagesz=1G hugepages=64"
 ```
 
 ## grub update
+- Ubuntu
+```
+update-grub
+```
+
 - CentOS
 ```
 grub2-mkconfig -o /boot/grub2/grub.cfg
 ```
+
 
 ## /etc/fstab
 ```
