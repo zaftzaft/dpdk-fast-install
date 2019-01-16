@@ -70,6 +70,12 @@ grub2-mkconfig -o /boot/grub2/grub.cfg
 hugetlbfs           /dev/hugepages  hugetlbfs      defaults        0 0
 ```
 
+## .bashrc
+```
+export RTE_SDK=/usr/local/share/dpdk
+export RTE_TARGET=x86_64-native-linuxapp-gcc
+```
+
 # dpdk-devbind....
 ```dpdk-init.sh
 modprobe uio
@@ -80,6 +86,16 @@ dpdk-devbind -b igb_uio 0000:18:00.0
 dpdk-devbind -b igb_uio 0000:18:00.1
 ```
 
+
+
+# uninstall DPDK
+```
+
+rm /usr/local/lib/librte_*
+rm /usr/local/lib/libdpdk.a
+rm -r /usr/local/share/dpdk
+rm -r /usr/local/include/dpdk
+```
 
 
 
