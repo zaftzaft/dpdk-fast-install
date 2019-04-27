@@ -108,3 +108,9 @@ sudo useradd -m -s /bin/bash USER
 sudo gpasswd -a USER sudo
 sudo passwd USER
 ```
+
+## Mellanox OFED
+```
+apt update
+./mlnxofedinstall --upstream-libs --dpdk
+```
