@@ -111,6 +111,8 @@ sudo passwd USER
 
 ## Mellanox OFED
 ```
+
+apt install libmnl-dev
 apt update
 ./mlnxofedinstall --upstream-libs --dpdk
 ```
