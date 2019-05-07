@@ -19,8 +19,9 @@ yum install libibverbs
 ```
 
 # Download
-```
-wget http://fast.dpdk.org/rel/dpdk-18.11.tar.xz
+```bash
+# wget http://fast.dpdk.org/rel/dpdk-18.11.tar.xz
+wget https://fast.dpdk.org/rel/dpdk-19.02.tar.xz
 ```
 
 # Install
@@ -79,8 +80,8 @@ export RTE_TARGET=x86_64-native-linuxapp-gcc
 # dpdk-devbind....
 ```dpdk-init.sh
 modprobe uio
-insmod /opt/dpdk-18.11/build/kmod/igb_uio.ko
-insmod /opt/dpdk-18.11/build/kmod/rte_kni.ko
+insmod /opt/dpdk-19.02/build/kmod/igb_uio.ko
+insmod /opt/dpdk-19.02/build/kmod/rte_kni.ko
 
 dpdk-devbind -b igb_uio 0000:18:00.0
 dpdk-devbind -b igb_uio 0000:18:00.1
