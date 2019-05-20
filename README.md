@@ -52,6 +52,9 @@ sudo make install
 ## /etc/default/grub
 ```
 GRUB_CMDLINE_LINUX="default_hugepagesz=1G hugepagesz=1G hugepages=64"
+
+## for IOMMU
+GRUB_CMDLINE_LINUX="default_hugepagesz=1G hugepagesz=1G hugepages=40 iommu=pt intel_iommu=on"
 ```
 
 ## grub update
@@ -116,4 +119,9 @@ sudo passwd USER
 apt install libmnl-dev
 apt update
 ./mlnxofedinstall --upstream-libs --dpdk
+```
+
+## Check IOMMU
+```
+dmesg | grep -e DMAR -e IOMMU
 ```
