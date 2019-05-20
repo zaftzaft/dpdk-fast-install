@@ -41,6 +41,9 @@ make
 # all core
 make -j `grep -c ^processor /proc/cpuinfo 2>/dev/null`
 
+# Debug make
+EXTRA_CFLAGS=-g make
+
 
 sudo make install
 ```
