@@ -128,8 +128,15 @@ apt update
 http://www.mellanox.com/page/management_tools
 
 ```
+./install.sh
+mst start
+```
 
-mlxlink -d <>
+```
+mlxlink -d /dev/mst/XXXXXXXXX
+
+
+mlxlink -d /dev/mst/XXXXXXXXX --show_fec
 ```
 
 
