@@ -124,6 +124,15 @@ apt update
 ./mlnxofedinstall --upstream-libs --dpdk
 ```
 
+## Mellanox TOOLS (MFT)
+http://www.mellanox.com/page/management_tools
+
+```
+
+mlxlink -d <>
+```
+
+
 ## Check IOMMU
 ```
 dmesg | grep -e DMAR -e IOMMU
