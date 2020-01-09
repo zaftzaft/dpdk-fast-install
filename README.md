@@ -3,7 +3,7 @@ DPDK Fast Install
 
 # ubuntu depends install
 ```
-sudo apt install python-minimal build-essential vim libnuma-dev gdb
+sudo apt install python-minimal build-essential vim libnuma-dev gdb  libfdt-dev
 sudo apt install linux-headers-$(uname -r) libpcap-dev
 
 
