@@ -98,10 +98,10 @@ dpdk-devbind -b igb_uio 0000:18:00.1
 # uninstall DPDK
 ```
 
-rm /usr/local/lib/librte_*
-rm /usr/local/lib/libdpdk.a
-rm -r /usr/local/share/dpdk
-rm -r /usr/local/include/dpdk
+sudo rm /usr/local/lib/librte_*
+sudo rm /usr/local/lib/libdpdk.a
+sudo rm -r /usr/local/share/dpdk
+sudo rm -r /usr/local/include/dpdk
 ```
 
 
